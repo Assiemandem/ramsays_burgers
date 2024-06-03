@@ -77,7 +77,7 @@ function addTomato() {                                                       //f
 
 
 
-//-------------------------------------------------Hamburger-------------------------------------------------//
+//-------------------------------------------------Hamburgervlees-------------------------------------------------//
 // Bron plaatjes van de hamburger: https://www.freepik.com/free-vector/flat-background-with-burger-ingredients_1137462.htm#fromView=search&page=1&position=0&uuid=5eb51ee0-7fc6-4c66-98c4-3fa800e43efd 
 
 function addBurger() {                                                       //functie om hamburger op de grill te leggen
@@ -102,7 +102,6 @@ function verbrandeBurger() {                                                 //f
 }
 
 function burgernaarbrood() {                                                 //functie om hamburger van grill naar bord te verplaatsen
-    console.log(burgerstatus)
     if (burgerstatus === "niks") {
         alert("leg eerst een hamburger op de grill")
     } else if (burgerstatus === "rauw") {
@@ -142,10 +141,10 @@ function burnedRamsey() {                                                   //fu
 }
 
 
-function gordonreactie() {                                                 //functie die gordon laat reageren op het moment je scoren kleiner of gelijk is aan 5
+function gordonscorereactie() {                                                  //functie die gordon laat reageren op het moment je scoren kleiner of gelijk is aan 5
     ramsey.src = "images/gordon_boos.png";
-    let donkeyaudio = new Audio("audio/donkey.mp3");                   //audio code van: https://www.youtube.com/watch?v=3xlws5og44U
-    donkeyaudio.play();                                                //bron van audio: https://www.myinstants.com/en/search/?name=gordon%20ramsay 
+    let donkeyaudio = new Audio("audio/donkey.mp3");                        //audio code van: https://www.youtube.com/watch?v=3xlws5og44U
+    donkeyaudio.play();                                                     //bron van audio: https://www.myinstants.com/en/search/?name=gordon%20ramsay 
 }
 
 
@@ -161,7 +160,7 @@ function klaar(){                                                           //fu
         score = Math.floor(Math.random() * 5) + 1;
         document.getElementById("scoregeven").textContent = "Je hebt " + score + " punten behaald!";
         afronden.innerHTML = "Opnieuw proberen";                            // innerhtml code van: https://www.permadi.com/tutorial/jsInnerHTMLDOM/
-        gordonreactie()
+        gordonscorereactie()
     } else if (ingredientenbijhouden > 5){
         score = Math.floor(Math.random() * 5) + 6;
         document.getElementById("scoregeven").textContent = "Je hebt " + score + " punten behaald!";
